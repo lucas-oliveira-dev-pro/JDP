@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoridade Digital para Advogados</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&family=Caveat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Work Sans", sans-serif;
+        background: #f7f3ea;
+        color: #111;
+        overflow-x: hidden;
+      }
+
+      /* TEXTURA DE FUNDO */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        opacity: 0.3;
+        z-index: -1;
+      }
+
+      /* SEÇÕES */
+      section.hero {
+        padding: 100px 8% 0px 8%;
+        position: relative;
+      }
+
+      /* HERO */
+      .hero {
+        background: #1A3253;
+        border: 3px solid #000;
+        /* transform: rotate(-1deg); */
+        box-shadow: 10px 10px 0 #000;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: #bcbaba;
+      }
+
+      .highlight {
+        background: black;
+        color: white;
+        padding: 5px 15px;
+        /* font-family: 'Caveat', cursive; */
+        font-size: 30px;
+        display: inline-block;
+        /* transform: rotate(-5deg); */
+      }
+
+      .hero p {
+        font-size: 20px;
+        max-width: 750px;
+        margin-bottom: 40px;
+      }
+
+      /* BOTÃO ADESIVO */
+      .btn {
+        display: inline-block;
+        background: #00c2ff;
+        color: #000;
+        padding: 18px 35px;
+        font-size: 20px;
+        font-weight: 800;
+        text-decoration: none;
+        border: 3px solid #000;
+        box-shadow: 6px 6px 0 #000;
+        /* transform: rotate(3deg); */
+        transition: 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+
+      /* BLOCO RECORTADO */
+      .card {
+        background: white;
+        padding: 20px 20px 0px 20px;
+        /* margin-bottom: 70px; */
+        border-top: 3px solid #00c2ff;
+        /* box-shadow: 12px 12px 0 #000; */
+        /* transform: rotate(+1deg); */
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .card-2 {
+        background: white;
+        /* padding: 50px; */
+        /* margin-bottom: 70px; */
+        /* border: 3px solid #000; */
+        /* box-shadow: 12px 12px 0 #000; */
+        /* transform: rotate(+1deg); */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: white;
+        padding: 10px 20px 0px 20px;
+        /* margin-bottom: 70px; */
+        /* border-top: 3px solid #00c2ff; */
+        /* box-shadow: 12px 12px 0 #000; */
+        /* transform: rotate(+1deg); */
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* FITA ADESIVA */
+      /* .card::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 40%;
+        width: 120px;
+        height: 30px;
+        background: #00c2ff;
+        border: 2px solid #000;
+        transform: rotate(+10deg);
+      } */
+
+      /* TÍTULOS */
+      .card h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+      .card-2 h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+
+      .card ul {
+        list-style: none;
+      }
+
+      .card li {
+        font-size: 18px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      /* OFERTA */
+      .offer {
+        background: #ff4d6d;
+        color: white;
+        /* border: 3px solid #000; */
+        /* box-shadow: 12px 12px 0 #000; */
+        /* transform: rotate(1deg); */
+        text-align: center;
+      }
+
+      .price {
+        font-size: 56px;
+        font-weight: 800;
+        margin: 25px 0;
+        font-family: "Caveat", cursive;
+        background: #fff;
+        color: #000;
+        display: inline-block;
+        padding: 10px 25px;
+        border: 3px solid #000;
+        transform: rotate(-3deg);
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 60px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .headline-impact {
+        font-family: "Work Sans", sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.2;
+        background: #ffffff;
+        padding: 30px;
+        border: 3px solid #000;
+        box-shadow: 10px 10px 0 #000;
+        display: inline-block;
+        position: relative;
+        /* transform: rotate(-1deg); */
+        max-width: 900px;
+      }
+      .bg-blue {
+        background-color: #00c2ff;
+      }
+
+      .headline-gradient {
+        font-family: "Work Sans", sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+
+        /* padding: 30px;
+        border: 3px solid #000;
+        box-shadow: 10px 10px 0 #000;
+        display: inline-block;
+        position: relative; */
+
+        background: linear-gradient(90deg, #7a00ff);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-size: 300%;
+        animation: gradientMove 6s ease infinite;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0%;
+        }
+        50% {
+          background-position: 100%;
+        }
+        100% {
+          background-position: 0%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero">
+      <h1>
+        Advogados que não aparecem no Google estão
+        <span class="highlight">perdendo clientes</span>
+      </h1>
+      <p>
+        Desenvolvo seu site de forma estratégica para conseguir novos clientes.
+      </p>
+      <!-- <a href="#" class="btn">Solicitar Diagnóstico Gratuito</a> -->
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="headline-impact">
+          A maioria das pessoas procuram advogados pelo Google
+        </h2>
+        <!-- <ul> -->
+        <!-- <li>• Baixa autoridade digital</li> -->
+        <!-- <li>• Seu site não transmite credibilidade</li> -->
+        <!-- <li>• A maioria das pessoas procuram advogados pelo Google</li> -->
+        <!-- <li>• Falta de posicionamento no Google</li> -->
+        <!-- <li>• Você depende apenas de indicação</li> -->
+        <!-- </ul> -->
+      </div>
+
+      <div class="card-2">
+        <h2 class="headline-impact">
+          Crie seu site para aparecer em primeiro lugar no Google
+        </h2>
+        <!-- <ul> -->
+        <!-- <li>• Estrutura otimizada para SEO</li> -->
+        <!-- <li>• Criar site para aparecer em primeiro no Google com design profissional jurídico</li> -->
+        <!-- <li>• Integração com WhatsApp</li> -->
+        <!-- <li>• Entrega em até 5 dias</li> -->
+        <!-- </ul> -->
+      </div>
+    </section>
+
+    <section class="offer">
+      <!-- <h2>Crie seu site por apenas</h2>
+      <div class="price">R$ 100</div> -->
+      <!-- <p>50% na contratação + 50% na entrega</p> -->
+      <a href="https://wa.me/5571993553137" class="btn">FALAR NO WHATSAPP</a>
+    </section>
+
+    <footer>
+      Landing Pages Estratégicas para Advogados • Autoridade • Visibilidade •
+      Conversão
+    </footer>
+  </body>
+</html>

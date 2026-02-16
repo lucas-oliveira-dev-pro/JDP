@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advogado Trabalhista | Defesa dos Seus Direitos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f4f1ea;
+  color:#111;
+  overflow-x:hidden;
+}
+
+section{
+  padding:80px 10%;
+  position:relative;
+}
+
+h1,h2{
+  font-family:'Playfair Display', serif;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+  position:relative;
+  z-index:2;
+}
+
+.hero-text h1{
+  font-size:3.2rem;
+  line-height:1.1;
+}
+
+.hero-text span{
+  background:#c0392b;
+  color:white;
+  padding:5px 15px;
+  transform:rotate(-2deg);
+  display:inline-block;
+}
+
+.hero-text p{
+  margin:20px 0;
+  font-size:1.1rem;
+  max-width:500px;
+}
+
+.cta-btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transform:rotate(-1deg);
+  transition:0.3s;
+}
+
+.cta-btn:hover{
+  transform:rotate(0deg) scale(1.05);
+}
+
+.hero-img{
+  flex:1;
+  position:relative;
+}
+
+.hero-img img{
+  width:100%;
+  max-width:400px;
+  border:8px solid #111;
+  transform:rotate(3deg);
+  box-shadow:20px 20px 0px #c0392b;
+}
+
+/* Elementos decorativos estilo colagem */
+
+.tape{
+  position:absolute;
+  width:120px;
+  height:35px;
+  background:#e5d5b8;
+  top:-20px;
+  left:30%;
+  transform:rotate(-15deg);
+}
+
+.blob{
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#c0392b;
+  border-radius:50%;
+  z-index:0;
+  right:-100px;
+  top:-80px;
+}
+
+/* Seção Autoridade */
+
+.authority{
+  background:#111;
+  color:white;
+}
+
+.authority h2{
+  font-size:2.5rem;
+  margin-bottom:30px;
+}
+
+.cards{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#f4f1ea;
+  color:#111;
+  padding:30px;
+  flex:1;
+  min-width:250px;
+  transform:rotate(-1deg);
+  box-shadow:10px 10px 0px #c0392b;
+}
+
+.card:nth-child(2){
+  transform:rotate(2deg);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* Depoimentos */
+
+.testimonial{
+  background:#c0392b;
+  color:white;
+  text-align:center;
+}
+
+.testimonial blockquote{
+  font-size:1.3rem;
+  max-width:700px;
+  margin:0 auto 20px;
+}
+
+.footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:40px 10%;
+}
+
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-img img{
+    transform:rotate(0deg);
+    box-shadow:10px 10px 0px #c0392b;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="blob"></div>
+  
+  <div class="hero-text">
+    <div class="tape"></div>
+    <h1>Especialista em <span>Direito Trabalhista</span></h1>
+    <p>Defesa estratégica para trabalhadores que tiveram seus direitos violados. Atendimento ágil, sigiloso e altamente técnico.</p>
+    <a href="#" class="cta-btn">Falar com Advogado Agora</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f" alt="Advogado Trabalhista">
+  </div>
+</section>
+
+<section class="authority">
+  <h2>Por que confiar no meu trabalho?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>+500 Processos Atendidos</h3>
+      <p>Experiência sólida na defesa de direitos trabalhistas, incluindo verbas rescisórias, horas extras e assédio moral.</p>
+    </div>
+    <div class="card">
+      <h3>Especialização Técnica</h3>
+      <p>Atuação estratégica baseada na Consolidação das Leis do Trabalho (CLT) e jurisprudência atualizada.</p>
+    </div>
+    <div class="card">
+      <h3>Atendimento Personalizado</h3>
+      <p>Cada caso é analisado com profundidade para maximizar as chances de êxito.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <blockquote>
+    “Graças ao trabalho estratégico e dedicado, consegui receber todos os meus direitos após demissão injusta.”
+  </blockquote>
+  <strong>— Cliente atendido</strong>
+</section>
+
+<section class="footer">
+  <h2>Seus direitos não podem esperar.</h2>
+  <p>Entre em contato agora mesmo e receba orientação especializada.</p>
+  <br>
+  <a href="#" class="cta-btn">Solicitar Atendimento</a>
+  <br><br>
+  <small>© 2026 - Advogado Trabalhista | Todos os direitos reservados</small>
+</section>
+
+</body>
+</html>
