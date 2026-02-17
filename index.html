@@ -18,21 +18,22 @@
         box-sizing: border-box;
       }
 
+      html,
       body {
-        font-family: "Work Sans", sans-serif;
-        background: #f7f3ea;
-        color: #111;
+        width: 100%;
         overflow-x: hidden;
       }
 
-      /* TEXTURA DE FUNDO */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
+      body {
+        font-family: "Work Sans", sans-serif;
+        background-color: #f7f3ea;
+        color: #111;
+
+        /* textura sem pseudo-elemento (mais compatível com Instagram) */
         background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-        opacity: 0.3;
-        z-index: -1;
+        background-repeat: repeat;
+        background-size: auto;
+        background-attachment: scroll;
       }
 
       /* SEÇÕES */
@@ -45,7 +46,6 @@
       .hero {
         background: #1a3253;
         border: 3px solid #000;
-        /* transform: rotate(-1deg); */
         -webkit-box-shadow: 10px 10px 0 #000;
         box-shadow: 10px 10px 0 #000;
       }
@@ -58,13 +58,11 @@
       }
 
       .highlight {
-        background: black;
-        color: white;
+        background: #000;
+        color: #fff;
         padding: 5px 15px;
-        /* font-family: 'Caveat', cursive; */
         font-size: 30px;
         display: inline-block;
-        /* transform: rotate(-5deg); */
       }
 
       .hero p {
@@ -74,7 +72,7 @@
         color: #fff;
       }
 
-      /* BOTÃO ADESIVO */
+      /* BOTÃO */
       .btn {
         display: inline-block;
         background: #00c2ff;
@@ -86,78 +84,42 @@
         border: 3px solid #000;
         -webkit-box-shadow: 6px 6px 0 #000;
         box-shadow: 6px 6px 0 #000;
-        /* transform: rotate(3deg); */
-        -webkit-transition: 0.2s ease;
-        -o-transition: 0.2s ease;
-        transition: 0.2s ease;
+
+        -webkit-transition: -webkit-transform 0.2s ease;
+        transition: transform 0.2s ease;
       }
 
       .btn:hover {
-        -webkit-transform: rotate(0deg) scale(1.05);
-        -ms-transform: rotate(0deg) scale(1.05);
-        transform: rotate(0deg) scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
       }
 
-      /* BLOCO RECORTADO */
-      .card {
-        background: white;
-        padding: 20px 20px 0px 20px;
-        /* margin-bottom: 70px; */
-        border-top: 3px solid #00c2ff;
-        /* box-shadow: 12px 12px 0 #000; */
-        /* transform: rotate(+1deg); */
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      }
+      /* CARDS */
+      .card,
       .card-2 {
-        background: white;
-        /* padding: 50px; */
-        /* margin-bottom: 70px; */
-        /* border: 3px solid #000; */
-        /* box-shadow: 12px 12px 0 #000; */
-        /* transform: rotate(+1deg); */
+        background: #fff;
         position: relative;
+
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        background: white;
-        padding: 10px 20px 0px 20px;
-        /* margin-bottom: 70px; */
-        /* border-top: 3px solid #00c2ff; */
-        /* box-shadow: 12px 12px 0 #000; */
-        /* transform: rotate(+1deg); */
-        position: relative;
-        display: flex;
-        justify-content: center;
       }
 
-      /* FITA ADESIVA */
-      /* .card::before {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: 40%;
-        width: 120px;
-        height: 30px;
-        background: #00c2ff;
-        border: 2px solid #000;
-        transform: rotate(+10deg);
-      } */
+      .card {
+        padding: 20px 20px 0px 20px;
+        border-top: 3px solid #00c2ff;
+      }
+
+      .card-2 {
+        padding: 10px 20px 0px 20px;
+      }
 
       /* TÍTULOS */
-      .card h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        font-weight: 800;
-      }
+      .card h2,
       .card-2 h2 {
         font-size: 36px;
         margin-bottom: 20px;
@@ -177,10 +139,7 @@
       /* OFERTA */
       .offer {
         background: #ff4d6d;
-        color: white;
-        /* border: 3px solid #000; */
-        /* box-shadow: 12px 12px 0 #000; */
-        /* transform: rotate(1deg); */
+        color: #fff;
         text-align: center;
       }
 
@@ -195,7 +154,6 @@
         padding: 10px 25px;
         border: 3px solid #000;
         -webkit-transform: rotate(-3deg);
-        -ms-transform: rotate(-3deg);
         transform: rotate(-3deg);
       }
 
@@ -206,26 +164,28 @@
         font-size: 14px;
         font-weight: 600;
       }
+
       .headline-impact {
         font-family: "Work Sans", sans-serif;
         font-size: 42px;
         font-weight: 800;
         line-height: 1.2;
-        background: #ffffff;
+        background: #fff;
         padding: 30px;
         border: 3px solid #000;
         -webkit-box-shadow: 10px 10px 0 #000;
         box-shadow: 10px 10px 0 #000;
         display: inline-block;
         position: relative;
-        /* transform: rotate(-1deg); */
         max-width: 900px;
         width: 100%;
       }
+
       .bg-blue {
         background-color: #00c2ff;
       }
 
+      /* GRADIENTE NO TEXTO (com fallback) */
       .headline-gradient {
         font-family: "Work Sans", sans-serif;
         font-size: 44px;
@@ -233,27 +193,23 @@
         line-height: 1.2;
         text-align: center;
 
-        /* padding: 30px;
-        border: 3px solid #000;
-        box-shadow: 10px 10px 0 #000;
-        display: inline-block;
-        position: relative; */
+        /* fallback se o webview bugar */
+        color: #7a00ff;
 
-        background: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          from(#7a00ff)
+        background-image: -webkit-linear-gradient(
+          90deg,
+          #7a00ff,
+          #00c2ff,
+          #ff4d6d
         );
-
-        background: -o-linear-gradient(left, #7a00ff);
-
-        background: linear-gradient(90deg, #7a00ff);
-
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #7a00ff, #00c2ff, #ff4d6d);
 
         background-size: 300%;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
         -webkit-animation: gradientMove 6s ease infinite;
         animation: gradientMove 6s ease infinite;
       }
