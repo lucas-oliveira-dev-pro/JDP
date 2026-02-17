@@ -237,6 +237,45 @@
           background-position: 0%;
         }
       }
+
+      .hero h1 {
+        font-size: 52px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: #bcbaba;
+
+        /* evita estourar largura */
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .highlight {
+        display: inline;
+        padding: 5px 12px;
+
+        /* garante quebra se precisar */
+        white-space: normal;
+      }
+      @media (max-width: 480px) {
+        section.hero {
+          padding: 60px 6% 0px 6%;
+        }
+
+        .hero h1 {
+          font-size: 34px;
+          line-height: 1.15;
+        }
+
+        .highlight {
+          font-size: 22px;
+          padding: 4px 10px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
 
